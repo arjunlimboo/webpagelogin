@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.left-panel{
+    width:35%;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.moon{
+    width:90px;
+    height:90px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:50px;
+    left:50px;
+}
+
+.birds{
+    position:absolute;
+    top:70px;
+    right:120px;
+    font-size:30px;
+}
+
+.welcome{
+    width:80%;
+    text-align:center;
+}
+
+.welcome h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.right-panel{
+    width:65%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.dashboard{
+    width:90%;
+}
+
+.top-card{
+    background:#2563eb;
+    color:white;
+    padding:30px;
+    border-radius:20px;
+}
+
+.cards{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#f8fafc;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.card i{
+    font-size:35px;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+}
+
+.buttons button{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+}
+
+#editBtn{
+    background:#2563eb;
+}
+
+#profileBtn{
+    background:#22c55e;
+}
+
+#logoutBtn{
+    background:#ef4444;
+}

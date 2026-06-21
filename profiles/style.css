@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.left-panel{
+    width:40%;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.welcome{
+    text-align:center;
+    width:80%;
+}
+
+.welcome h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.welcome p{
+    line-height:1.7;
+    color:#d1d5db;
+}
+
+.social-title{
+    margin-top:30px;
+    font-weight:bold;
+}
+
+.status{
+    margin-top:15px;
+    color:#22c55e;
+    font-size:18px;
+}
+
+.moon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:white;
+    position:absolute;
+    top:50px;
+    left:50px;
+}
+
+.birds{
+    position:absolute;
+    top:70px;
+    right:180px;
+    font-size:28px;
+    
+}
+
+.right-panel{
+    width:60%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+}
+
+.profile-card{
+    width:500px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.profile-image{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#2563eb;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:50px;
+}
+
+.profile-card h1{
+    margin:20px 0;
+}
+
+.info{
+    margin-top:30px;
+}
+
+.info-box{
+    background:#f8fafc;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    text-align:left;
+}
+
+.info-box span{
+    color:#64748b;
+    font-size:13px;
+}
+
+.info-box p{
+    margin-top:5px;
+    font-size:16px;
+    font-weight:600;
+}
+
+.logout-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#ef4444;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.logout-btn:hover{
+    opacity:.9;
+}
+

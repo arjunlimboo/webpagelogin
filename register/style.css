@@ -1,0 +1,420 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+#0b1f4d,
+#0d6aa5
+);
+}
+
+.container{
+width:100%;
+height:100vh;
+display:flex;
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+border-radius:6px;
+overflow:hidden;
+}
+
+/* LEFT SIDE */
+
+.left-panel{
+flex:1;
+position:relative;
+
+background:
+linear-gradient(
+180deg,
+#0087c7,
+#1f3f73
+);
+
+display:flex;
+justify-content:center;
+align-items:flex-end;
+padding-bottom:80px;
+overflow:hidden;
+}
+
+.moon{
+position:absolute;
+top:80px;
+left:50%;
+transform:translateX(-50%);
+
+width:140px;
+height:140px;
+border-radius:50%;
+background:white;
+
+box-shadow:
+0 0 40px white,
+0 0 80px white;
+}
+
+.birds{
+position:absolute;
+top:110px;
+font-size:60px;
+}
+
+.welcome{
+text-align:center;
+color:white;
+max-width:320px;
+z-index:2;
+}
+
+.welcome h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.welcome p{
+font-size:14px;
+line-height:1.6;
+color:#ddd;
+}
+
+.social-title{
+margin-top:60px;
+font-size:10px;
+letter-spacing:2px;
+}
+
+.social-icons{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.social-icons a{
+width:40px;
+height:40px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:white;
+text-decoration:none;
+}
+
+.fa-twitter{
+color:#1da1f2;
+}
+
+.fa-google-plus-g{
+color:#db4437;
+}
+
+.fa-facebook-f{
+color:#1877f2;
+}
+
+/* RIGHT SIDE */
+
+.right-panel{
+flex:1;
+background:white;
+padding:0px 50px;
+position:relative;
+height: 100vh;
+overflow-y: auto;
+}
+.right-panel::-webkit-scrollbar{
+    width:8px;
+}
+
+.right-panel::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
+
+.right-panel::-webkit-scrollbar-thumb{
+    background:#27aae1;
+    border-radius:10px;
+}
+
+
+.tabs{
+ position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    background: white;
+    padding: 10px 10px;
+}
+
+.tabs button{
+border:none;
+padding:18px 35px;
+cursor:pointer;
+font-weight:600;
+background:white;
+}
+
+.tabs .active{
+background:#27aae1;
+color:white;
+}
+
+.form{
+margin-top:80px;
+padding-top: 20px;
+}
+
+.form h1{
+    top: 0;
+    background: white;
+    z-index: 1000;
+
+    font-size: 56px;
+    margin: 0;
+    padding: 20px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.form label{
+display:block;
+font-size:12px;
+font-weight:bold;
+margin-top:20px;
+color:#555;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"]{
+
+width:100%;
+border:none;
+border-bottom:1px solid #ccc;
+padding:12px 0;
+margin-bottom:20px;
+outline:none;
+}
+
+#phone{
+    width:100%;
+    border:none;
+    border-bottom:1px solid #ccc;
+    padding:12px 0;
+    outline:none;
+}
+
+.iti{
+    width:100%;
+}
+
+.iti__selected-flag{
+    background:none !important;
+}
+.checkbox{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-top:15px;
+font-size:12px;
+color:#888;
+}
+
+.checkbox a{
+color:#27aae1;
+text-decoration:none;
+font-weight:bold;
+}
+
+.signup-btn{
+width:100%;
+margin-top:10px;
+padding:15px;
+border:none;
+border-radius:4px;
+background:#27aae1;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.signup-btn:hover{
+background:#0d95d1;
+}
+
+/* =====================================
+   ANIMATIONS - ADD BELOW YOUR CSS
+===================================== */
+
+/* Page Load */
+.container{
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* Left Panel Slide */
+.left-panel{
+    animation: slideLeft .8s ease;
+}
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* Right Panel Slide */
+.right-panel{
+    animation: slideRight .8s ease;
+}
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* Floating Moon */
+.moon{
+    animation: moonFloat 4s ease-in-out infinite;
+}
+
+@keyframes moonFloat{
+    0%,100%{
+        transform:translateX(-50%) translateY(0);
+    }
+
+    50%{
+        transform:translateX(-50%) translateY(-15px);
+    }
+}
+
+/* Welcome Content */
+.welcome{
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Register Heading */
+.form h1{
+    animation: zoomIn .8s ease;
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* Inputs */
+.form input{
+    transition:.3s ease;
+}
+
+.form input:focus{
+    border-bottom:2px solid #27aae1 !important;
+    transform:scale(1.01);
+}
+
+/* Buttons */
+.signup-btn{
+    transition:.3s ease;
+}
+
+.signup-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(39,170,225,.35);
+}
+
+.signup-btn:active{
+    transform:scale(.98);
+}
+
+/* Social Icons */
+.social-icons a{
+    transition:.3s ease;
+}
+
+.social-icons a:hover{
+    transform:translateY(-6px) rotate(10deg);
+}
+
+/* Tabs */
+.tabs button{
+    transition:.3s ease;
+}
+
+.tabs button:hover{
+    background:#27aae1;
+    color:white;
+}
+
+/* Scrollbar Smooth */
+.right-panel{
+    scroll-behavior:smooth;
+}
+
+/* Stagger Effect */
+.form label{
+    animation: fieldFade .8s ease;
+}
+
+@keyframes fieldFade{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
